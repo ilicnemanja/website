@@ -1,16 +1,39 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import "./globals.css";
+import Navbar from "@/components/navigation/navbar";
+import ThemeProvider from "@/context/Theme";
+
+const sansation = localFont({
+  src: [
+    {
+      path: "./fonts/Sansation_Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Sansation_Bold_Italic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "./fonts/Sansation_Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Sansation_Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Sansation_Light_Italic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+  ],
+  variable: "--font-sansation",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +47,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sansation.variable} bg-slate-50 antialiased dark:bg-stone-900`}
       >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
