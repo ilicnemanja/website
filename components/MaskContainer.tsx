@@ -44,7 +44,7 @@ export const MaskContainer = ({
       className={cn("h-screen relative", className)}
     >
       <motion.div
-        className="bg-grid-white/[0.2] absolute flex size-full items-center justify-center bg-black text-6xl text-primary-100 [mask-image:url(/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-secondary-100 dark:text-secondary-100"
+        className="bg-grid-white/[0.2] absolute flex size-full items-center justify-center bg-black text-6xl text-primary-100 [mask-image:url(/images/mask.svg)] [mask-repeat:no-repeat] [mask-size:40px] dark:bg-secondary-100 dark:text-secondary-100"
         animate={{
           maskPosition: `${mousePosition.x - maskSize / 2}px ${
             mousePosition.y - maskSize / 2
