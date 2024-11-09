@@ -11,12 +11,12 @@ export default {
     extend: {
       colors: {
         primary: {
-          "100": "#493628",
-          "200": "#AB886D",
+          "100": "#605678",
+          "200": "#8ABFA3",
         },
         secondary: {
-          "100": "#E4E0E1",
-          "200": "#D6C0B3",
+          "100": "#F5EFFF",
+          "200": "#50B498",
         },
       },
       borderRadius: {

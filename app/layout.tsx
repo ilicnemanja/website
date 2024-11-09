@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sansation.variable} bg-slate-50 antialiased dark:bg-stone-900`}
+        className={`${sansation.variable} bg-[#FFFFFF] antialiased dark:bg-[#000000]`}
       >
         <ThemeProvider
           attribute="class"

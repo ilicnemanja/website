@@ -57,7 +57,7 @@ const Navbar = () => {
         <li>
           <Link onClick={() => setPath("#contact")} href="#contact">
             <Button
-              className={`-mr-2 h-[40px] w-[120px] border border-slate-100 bg-white text-[18px] text-primary-100 shadow-md hover:bg-slate-50 hover:text-primary-200 dark:border-primary-200 dark:bg-primary-100 dark:text-secondary-100 dark:hover:bg-primary-200 dark:hover:text-primary-100 ${path === "#contact" ? "text-primary-200 dark:bg-secondary-200 dark:text-primary-100" : ""}`}
+              className={`-mr-2 h-[40px] w-[120px] border border-slate-100 bg-white text-[18px] text-primary-100 shadow-md hover:bg-slate-50 hover:bg-opacity-30 hover:text-primary-200 dark:border-secondary-100 dark:bg-black dark:text-secondary-100 dark:hover:bg-slate-50 dark:hover:bg-opacity-30 dark:hover:text-primary-200 ${path === "#contact" ? "text-primary-200 dark:bg-slate-50 dark:bg-opacity-30 dark:text-secondary-200" : ""}`}
             >
               Contact
             </Button>
