@@ -3,7 +3,7 @@ import React from "react";
 
 const Technologies = () => {
   return (
-    <div className="mb-24 mt-36 bg-[#f5f5f5] py-8 dark:bg-[#7272728e]">
+    <div className="mb-24 mt-36 bg-[#f5f5f5] py-8 dark:bg-[#8a898975]">
       <h1 className="mb-2 text-center font-sansation text-xl text-primary-100 dark:text-secondary-100">
         Using the latest technologies
       </h1>
