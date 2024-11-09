@@ -1,8 +1,10 @@
 "use client";
 
+import { Squeeze as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { TextHoverEffect } from "@/components/TextHoverEffect";
 import { Button } from "@/components/ui/button";
 
 import Theme from "./Theme";
@@ -21,12 +23,14 @@ const Navbar = () => {
   }, [isMounted]);
 
   return (
-    <nav className="dark:hover text- mx-4 mt-[30px] flex max-w-screen-xl items-center justify-between font-sansation text-primary-100 dark:text-secondary-100 xl:mx-auto">
-      <Link onClick={() => setPath("")} href="/" className="text-[24px]">
-        Nemanja | Software Engineer
-      </Link>
+    <nav className="dark:hover mx-4 flex max-w-screen-xl items-center justify-between pt-8 font-sansation text-primary-100 dark:text-secondary-100 md:-mt-14 lg:pt-0 xl:mx-auto">
+      <TextHoverEffect text="Nemanja | Software Engineer" />
 
-      <ul className="flex items-center gap-[24px] text-[18px]">
+      <span className="flex text-primary-100 dark:text-secondary-100 md:hidden">
+        <Hamburger size={30} />
+      </span>
+
+      <ul className="hidden items-center gap-[24px] text-[18px] md:flex">
         <li>
           <Link
             onClick={() => setPath("#services")}
